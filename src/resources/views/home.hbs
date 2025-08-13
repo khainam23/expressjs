@@ -1,1 +1,16 @@
-<h1>Hello world!</h1>
+<div class="container mt-3">
+  <div class="row g-3">
+    {{#each courses}}
+      <div class="col-md-4">
+        <div class="card h-100" data-id="{{this.id}}">
+          <img src="{{this.image}}" class="card-img-top" alt="{{this.name}}" />
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="#" class="btn btn-primary">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
