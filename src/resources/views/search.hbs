@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <!-- Tiêu đề trang -->
+      <div class="text-center mb-4">
+        <h1 class="display-4 text-primary">
+          <i class="bi bi-search"></i>
+          Tìm kiếm
+        </h1>
+        <p class="text-muted">Nhập từ khóa để tìm kiếm thông tin</p>
+      </div>
+
+      <!-- Form tìm kiếm -->
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <form action="/search" method="POST">
+            <div class="mb-3">
+              <label for="searchQuery" class="form-label">Từ khóa tìm kiếm</label>
+              <div class="input-group input-group-lg">
+                <span class="input-group-text">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="searchQuery"
+                  name="q"
+                  placeholder="Nhập từ khóa..."
+                  value="{{query}}"
+                  required
+                  autofocus
+                />
+              </div>
+            </div>
+
+            <!-- Nút tìm kiếm -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-search me-2"></i>Tìm kiếm
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
