@@ -8,6 +8,11 @@ const {
 class SearchController {
   // GET /search
   async index(req, res, next) {
+    res.render("search");
+  }
+
+  // POST /search
+  async search(req, res, next) {
     Course.find({})
       .then((courses) => {
         res.render("home", {
